@@ -19,6 +19,7 @@ public class HashTable<K,V>{
         return Math.abs(key.hashCode()) % this.cubetas;
     } 
 
+<<<<<<< HEAD
     public void insertar(K key, V value){
         int indice = hash(key);
 
@@ -30,5 +31,8 @@ public class HashTable<K,V>{
         }
         table[indice].add(new Tupla<>(key,value));
     }
+=======
+    
+>>>>>>> e946abd1afccb792754f25db87d0333fd608e3b9
 
 }
