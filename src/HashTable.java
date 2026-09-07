@@ -30,7 +30,7 @@ public class HashTable<K,V>{
         }
         table[indice].add(new Tupla<>(key,value));
     }
-    
+
     public V buscar(K key){
         int indice = hash(key);
 
@@ -39,6 +39,17 @@ public class HashTable<K,V>{
                 return tupla.getValue();
         }
         return null;
+    }
+
+    public void eliminar(K key){
+        int indice = hash(key);
+
+        for(Tupla<K,V> tupla : this.table[indice]){
+            if(tupla.getKey().equals(key)){
+                table[indice].remove(tupla);
+                return;
+            }
+        }
     }
 
     @Override 
