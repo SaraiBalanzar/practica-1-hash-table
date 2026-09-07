@@ -1,25 +1,25 @@
 public class Tupla<K,V>{
-    private K llave; 
-    private V valor;
+    private K key; 
+    private V value;
 
-    public Tupla(K llave, V valor) {
-        this.llave = llave;
-        this.valor = valor;
+    public Tupla(K key, V value) {
+        this.key = key;
+        this.value = value;
     }
 
-    public K getLlave() {
-        return llave;
+    public K getKey() {
+        return key;
     }
 
-    public void setLlave(K llave) {
-        this.llave = llave;
+    public void setKey(K key) {
+        this.key = key;
     }
 
-    public V getValor() {
-        return valor;
+    public V getValue() {
+        return value;
     }
 
-    public void setValor(V valor) {
-        this.valor = valor;
+    public void setValue(V value) {
+        this.value = value;
     }
 }
