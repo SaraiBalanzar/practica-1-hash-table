@@ -1,4 +1,4 @@
-
+package src;
 import java.util.LinkedList;
 
 public class HashTable<K,V>{
@@ -8,10 +8,10 @@ public class HashTable<K,V>{
 
     public HashTable(int cubetas){
         this.cubetas  = cubetas;
-        table = new LinkedList[this.cubetas];
+        table = new LinkedList[cubetas];
 
-        for(int i = 0; i < table.length; i++){
-            table[i] = new LinkedList<>();
+        for(int i = 0; i < cubetas; i++){
+            this.table[i] = new LinkedList<>();
         }
     }
 
@@ -19,7 +19,6 @@ public class HashTable<K,V>{
         return Math.abs(key.hashCode()) % this.cubetas;
     } 
 
-<<<<<<< HEAD
     public void insertar(K key, V value){
         int indice = hash(key);
 
@@ -31,8 +30,33 @@ public class HashTable<K,V>{
         }
         table[indice].add(new Tupla<>(key,value));
     }
-=======
     
->>>>>>> e946abd1afccb792754f25db87d0333fd608e3b9
+    public V buscar(K key){
+        int indice = hash(key);
+
+        for(Tupla<K,V> tupla : this.table[indice]){
+            if(tupla.getKey().equals(key))
+                return tupla.getValue();
+        }
+        return null;
+    }
+
+    @Override 
+    public String toString(){
+        String cadena = "";
+
+        for(int i = 0; i < table.length; i++){
+            cadena += i + " -> ";
+
+            if(table[i]!=null && !table[i].isEmpty()){
+                for(Tupla<K,V> tupla : table[i]){
+                    cadena += "[" + tupla.getKey() + ", " + tupla.getValue() + "] -> ";
+                } 
+            }
+            cadena += " null\n";
+        }
+        
+        return cadena;
+    }
 
 }

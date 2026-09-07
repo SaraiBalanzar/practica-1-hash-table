@@ -1,3 +1,5 @@
+package src;
+
 public class Tupla<K,V>{
     private K key; 
     private V value;
