@@ -76,7 +76,7 @@ Ocurre una colisión. Una situación esperada debido a que el número de posible
 
 
 #### 5. Explicación de qué ocurre cuando varias llaves caen en la misma cubeta
-En encadenamiento cada tabla se crea con un número fijo de cubetas y cada cubeta contiene una lista ligada. Cuando más de una llave cae en la misma cubeta, ese dato se guarda dentro de la lista, manejando las colisiones por encadenamiento. Al insertar, se recorre la lista y, en caso de que la llave sea nueva, se agrega una nueva Tupla en la lista correspondiente; si ya existe, se actualiza su valor. Al buscar, se recorre igualmente la lista comparando llaves. Al eliminar, se recorre la lista para encontrar la Tupla correspondiente y se remueve únicamente esa, dejando el resto de la lista intacta. En direccionamiento abierto (HashTableOpenAddressing) En este caso no se usan listas, cada cubeta usa una Tupla o ninguna, en caso de una colisión se busca la siguiente cubeta disponible aumentando 1 a un contador y calculando el hash y el modulo de esa nueva cubeta, en este caso se agrega la etiqueta DELETED cuando se elimina y queda vacía para no interrumpir la búsqueda. Holaa, la respuesta de la pregunta 7 jaja
+En encadenamiento cada tabla se crea con un número fijo de cubetas y cada cubeta contiene una lista ligada. Cuando más de una llave cae en la misma cubeta, ese dato se guarda dentro de la lista, manejando las colisiones por encadenamiento. Al insertar, se recorre la lista y, en caso de que la llave sea nueva, se agrega una nueva Tupla en la lista correspondiente; si ya existe, se actualiza su valor. Al buscar, se recorre igualmente la lista comparando llaves. Al eliminar, se recorre la lista para encontrar la Tupla correspondiente y se remueve únicamente esa, dejando el resto de la lista intacta. En direccionamiento abierto (HashTableOpenAddressing) En este caso no se usan listas, cada cubeta usa una Tupla o ninguna, en caso de una colisión se busca la siguiente cubeta disponible aumentando 1 a un contador y calculando el hash y el modulo de esa nueva cubeta, en este caso se agrega la etiqueta DELETED cuando se elimina y queda vacía para no interrumpir la búsqueda. 
 
 
 #### 6. Factor de carga final obtenido durante sus pruebas
@@ -91,4 +91,4 @@ La tabla final de nuestras pruebas tiene un tamaño de 7 y guarda unicamente 4 e
 - **Edith Alejandra Mendoza Aragón**
 - **Evelyn Vianey Mondragón Ceballos**
 - **Oscar Adolfo Jaimez Martinez**
-- **Jorge Guadalupe Mancilla Laguna**
+- **Jorge Guadalupe Mancilla Lagunacd doc**
