@@ -5,7 +5,8 @@ public class Pruebas{
 
     public static void main(String[] args) {
 
-        HashTable hash = new HashTable<>(7);
+
+        HashTable<Integer, String> hash = new HashTable<>(7);
 
         /* Pruebas requeridas para la practica */
 
@@ -19,9 +20,9 @@ public class Pruebas{
         System.out.println("\n**** Prueba no.2: inserción básica ****\n");
         System.out.println("Se ejecuto: insertar(18, Ana)");
         hash.insertar(18, "Ana");
-        System.out.println("Se ejecuto: insertar(18, Luis)");
+        System.out.println("Se ejecuto: insertar(10, Luis)");
         hash.insertar(10, "Luis");
-        System.out.println("Se ejecuto: insertar(18, Elena)");
+        System.out.println("Se ejecuto: insertar(23, Elena)");
         hash.insertar(23, "Elena");
 
         System.out.println("\nSe ejecuto: buscar(18)");
@@ -94,6 +95,8 @@ public class Pruebas{
         System.out.println("\n**** Tabla final ****");
         System.out.println(hash);
         
+        // función de factor de carga
+        System.out.println("El factor de carga de la tabla final es: " + hash.factorCarga());
         
 
 

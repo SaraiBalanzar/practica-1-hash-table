@@ -5,7 +5,9 @@ public class HashTable<K,V>{
 
     private LinkedList<Tupla<K,V>>[] table;
     private int cubetas;
+    private int numElementos;
 
+    @SuppressWarnings("unchecked")
     public HashTable(int cubetas){
         this.cubetas  = cubetas;
         table = new LinkedList[cubetas];
@@ -29,6 +31,7 @@ public class HashTable<K,V>{
             }
         }
         table[indice].add(new Tupla<>(key,value));
+        this.numElementos++;
     }
 
     public V buscar(K key){
@@ -47,9 +50,14 @@ public class HashTable<K,V>{
         for(Tupla<K,V> tupla : this.table[indice]){
             if(tupla.getKey().equals(key)){
                 table[indice].remove(tupla);
+                this.numElementos--;
                 return;
             }
         }
+    }
+
+    public double factorCarga(){
+        return (double) this.numElementos / this.cubetas;
     }
 
     @Override 
